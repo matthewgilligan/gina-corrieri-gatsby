@@ -1,21 +1,34 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import MainLayout from './../layouts/MainLayout';
-// import MetaDecorator from './../../components/MetaDecorator';
-// import FAQ from './../../components/FAQ';
+import FAQ from './../components/FAQ';
 
-const FAQPage = () => {
+const FAQPage = ({ data }) => {
+  const { faq } = data;
+
   return (
     <MainLayout pageTitle="FAQ">
-      {/* <MetaDecorator
-        title="About | Gina Corrieri"
-        description="Gina Corrieri is an independent designer and reworker based in London."
-      />
-      <AboutInfo siteMetaData={this.state.siteMetaData} /> */}
-      <h1>Wagz</h1>
+      <FAQ {...faq} />
     </MainLayout>
   );
 };
+
+export const query = graphql`
+	query {
+		faq : allContentfulFaq ( sort: { fields:createdDate, order:DESC } ) {
+      edges {
+        node {
+          question
+          answer {
+            raw
+          }
+          createdDate
+        }
+      }
+    }
+	}
+`
 
 export default FAQPage;
 

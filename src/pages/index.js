@@ -1,18 +1,33 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
-// import MetaDecorator from './../../components/MetaDecorator';
-// import Landing from './../../components/Landing';
+import HomeLayout from '../layouts/HomeLayout';
+import Landing from './../components/Landing';
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const { data } = props;
+
   return (
-    <section className="homepage">
-      {/* <MetaDecorator
-        title="Gina Corrieri"
-        description="Gina Corrieri is an independent designer and reworker based in London."
-      />
-      <Landing {...this.state.project} /> */}
-    </section>
+    <HomeLayout>
+      <Landing {...data} />
+    </HomeLayout>
   );
 };
+
+export const query = graphql`
+	query {
+		contentfulProject {
+      images {
+        title
+        file {
+          url
+        }
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+	}
+`
 
 export default HomePage;

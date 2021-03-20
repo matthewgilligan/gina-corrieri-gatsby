@@ -1,22 +1,38 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import MainLayout from './../layouts/MainLayout';
-// import MetaDecorator from './../../components/MetaDecorator';
-// import Features from './../../components/Features';
+import Features from './../components/Features/';
 
-const FeaturesPage = () => {
+const FeaturesPage = ({ data }) => {
+  const { features } = data;
+  
 	return (
 		<MainLayout pageTitle="Features">
-      {/* <MetaDecorator
-        title="About | Gina Corrieri"
-        description="Gina Corrieri is an independent designer and reworker based in London."
-      />
-      <AboutInfo siteMetaData={this.state.siteMetaData} /> */}
-      <h1>Wagz</h1>
+      <Features {...features} />
     </MainLayout>
 	);
 };
 
+export const query = graphql`
+	query {
+		features : allContentfulFeature ( sort: { fields:releaseDate, order:DESC } ) {
+      edges {
+        node {
+          text {
+            raw
+          }
+          styledBy
+          releaseDate
+          url
+        }
+      }
+    }
+	}
+`
+
 export default FeaturesPage;
+
+
 
 

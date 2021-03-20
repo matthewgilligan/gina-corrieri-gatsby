@@ -1,10 +1,11 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import MainLayout from './../layouts/MainLayout';
 // import AboutInfo from './../../components/AboutInfo';
 // import MobilePageTitle from '../../components/MobilePageTitle';
 
-const AboutPage = () => {
+const AboutPage = (props) => {
   return (
     <MainLayout pageTitle="About">
       {/* <MetaDecorator
@@ -16,5 +17,16 @@ const AboutPage = () => {
     </MainLayout>
   );
 };
+
+// export const query = graphql`
+// 	query {
+// 		contentfulSiteMetaData ( limit: 1 ) {
+//       about {
+//         json
+//       }
+//       email
+//     }
+// 	}
+// `
 
 export default AboutPage;
