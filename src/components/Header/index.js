@@ -20,7 +20,7 @@ const InnerWrap = styled.div`
   display: flex;
   height: 5rem;
   width: 100%;
-  max-width: 1350px;
+  max-width: 1325px;
   margin: 0 auto;
   padding: 0;
   justify-content: space-between;
@@ -34,7 +34,7 @@ const LogoWrap = styled.div`
   top: 50%;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: 8px auto 0;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);

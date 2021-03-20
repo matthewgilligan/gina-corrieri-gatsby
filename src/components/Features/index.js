@@ -20,7 +20,6 @@ const Container = styled.div`
 const Features = ({ edges }) => {
   return (
 		<Container>
-			{/* <MobilePageTitle title="Features"/>*/}
 			{edges.map((feature, pos) => <Feature {...feature} key={pos} />)}
 		</Container>
 	);

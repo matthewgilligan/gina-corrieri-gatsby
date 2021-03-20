@@ -17,7 +17,7 @@ const InnerWrap = styled.div`
   display: flex;
   height: 6.5rem;
   width: 100%;
-  max-width: 1350px;
+  max-width: 1325px;
   margin: 0 auto;
   padding: 0;
   justify-content: space-between;

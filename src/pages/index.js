@@ -3,10 +3,15 @@ import { graphql } from 'gatsby';
 
 import HomeLayout from '../layouts/HomeLayout';
 import Landing from './../components/Landing';
+import SEO from './../components/SEO';
 
 const HomePage = ({ data }) => {
   return (
     <HomeLayout>
+      <SEO
+        title=""
+        article={false}
+      />
       <Landing {...data} />
     </HomeLayout>
   );

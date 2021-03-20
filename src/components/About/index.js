@@ -37,14 +37,15 @@ const InnerWrap = styled.div`
   @media only screen and (max-width: 700px) {
     width: 80%;
     border: none;
-  }
-  @media only screen and (max-width: 600px) {
-    width: 90%;
     position: relative;
     transform: none;
     -ms-transform: none;
     padding: 0;
     margin: 0 auto;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+    
   }
 `;
 
