@@ -4,9 +4,7 @@ import { graphql } from 'gatsby';
 import HomeLayout from '../layouts/HomeLayout';
 import Landing from './../components/Landing';
 
-const HomePage = (props) => {
-  const { data } = props;
-
+const HomePage = ({ data }) => {
   return (
     <HomeLayout>
       <Landing {...data} />

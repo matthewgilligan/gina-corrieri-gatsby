@@ -41,20 +41,6 @@ const videoStyle = {
   width: "90%",
 };
 
-const mobileStyle = {
-  display: "none",
-};
-
-const logoStyle = {
-  display: "inline-block",
-  position: "absolute",
-  left: "50%",
-  bottom: "0",
-  transform: "translateX(-50%)",
-  width: "40%",
-  marginTop: "150px",
-};
-
 const Copy = styled.div`
   position: relative;
   margin: 120px auto 150px auto;

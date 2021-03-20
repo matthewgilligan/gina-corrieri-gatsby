@@ -2,31 +2,26 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import MainLayout from './../layouts/MainLayout';
-// import AboutInfo from './../../components/AboutInfo';
+import About from './../components/About';
 // import MobilePageTitle from '../../components/MobilePageTitle';
 
-const AboutPage = (props) => {
+const AboutPage = ({ data }) => {
   return (
     <MainLayout pageTitle="About">
-      {/* <MetaDecorator
-        title="About | Gina Corrieri"
-        description="Gina Corrieri is an independent designer and reworker based in London."
-      />
-      <AboutInfo siteMetaData={this.state.siteMetaData} /> */}
-      <h1>Wagz</h1>
+      <About {...data} />
     </MainLayout>
   );
 };
 
-// export const query = graphql`
-// 	query {
-// 		contentfulSiteMetaData ( limit: 1 ) {
-//       about {
-//         json
-//       }
-//       email
-//     }
-// 	}
-// `
+export const query = graphql`
+	query {
+		contentfulSiteMetaData {
+      aboutText {
+        raw
+      }
+      email
+    }
+	}
+`
 
 export default AboutPage;
