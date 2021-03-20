@@ -66,6 +66,7 @@ const MainLayout = (props) => {
         </h2>
       </Title>
       <Content>
+        <h1 className="mobilePageTitle">{pageTitle}</h1>
         {children}
       </Content>
       <Footer />

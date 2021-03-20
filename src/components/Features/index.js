@@ -11,8 +11,9 @@ const Container = styled.div`
   -ms-transform: translateY(115px);
   @media only screen and (max-width: 900px) {
     width: 90%;
-    transform: translateY(85px);
-    -ms-transform: translateY(85px);
+    margin-top: 20px;
+    transform: none;
+    -ms-transform: none;
   }
 `;
 

@@ -7,10 +7,6 @@ const Container = styled.div`
   display: block;
   width: 100%;
   height: 100%;
-  @media only screen and (max-width: 600px) {
-    -ms-transform: translateY(85px);
-    transform: translateY(85px);
-  }
 `;
 
 const InnerWrap = styled.div`
