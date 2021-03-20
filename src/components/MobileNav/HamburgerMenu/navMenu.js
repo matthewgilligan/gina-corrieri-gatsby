@@ -60,7 +60,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="https://ginacorrieri.bigcartel.com">Shop</a>
+          <a href="http://shop.ginacorrieri.com/">Shop</a>
         </NavLink>
         <NavLink
           initial={false}

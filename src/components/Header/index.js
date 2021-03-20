@@ -19,7 +19,7 @@ const InnerWrap = styled.div`
   position: relative;
   display: flex;
   height: 5rem;
-  width: 100%;
+  width: 90%;
   max-width: 1325px;
   margin: 0 auto;
   padding: 0;
@@ -83,7 +83,7 @@ const Header = () => {
 
         <Column>
           <NavItem>
-            <a href="https://ginacorrieri.bigcartel.com">
+            <a href="http://shop.ginacorrieri.com/">
               Shop
             </a>
           </NavItem>
