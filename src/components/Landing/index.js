@@ -91,7 +91,7 @@ const Landing = (props) => {
   return (
     <Container>
       <Hero>
-        <video style={videoStyle} autoPlay loop muted>
+        <video style={videoStyle} autoPlay loop muted={true}>
           <source src={PhenomenaVideo} type='video/mp4' />
         </video>
         <img src={Image1} alt="Phenomena" className="mobileBanner"/>
