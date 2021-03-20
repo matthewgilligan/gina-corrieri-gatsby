@@ -7,6 +7,9 @@ const Container = styled.div`
   bottom: 0;
   width: 100%;
   z-index: 1;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const InnerWrap = styled.div`

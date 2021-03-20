@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import './../../styles/default.scss';
 import Header from './../../components/Header';
-// import MobileNav from '../components/MobileNav';
+import MobileNav from './../../components/MobileNav';
 import Footer from './../../components/Footer';
 
 const Container = styled.div`
@@ -58,8 +58,8 @@ const MainLayout = (props) => {
 
   return (
     <Container>
-      <Header {...props} />
-      {/* <MobileNav {...props} /> */}
+      <Header />
+      <MobileNav />
       <Title>
         <h2>
           {pageTitle}
